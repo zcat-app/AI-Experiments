@@ -92,3 +92,19 @@ GLM was quite OK, but it struggled a bit when codebase got bigger and had to ite
 They either had many false positive or completly missed HIGH or CRITICAL findings made by other models.
 
 Overall it creates product that seems working, and is in the test drive. I will report on it more after some time of using it
+
+## [Stargate](https://github.com/zcat-app/stargate)
+Stargate was idea of 3 module project that would create proxy for possible anonymous browsing. The idea was to have configurable proxy that could be used via browser (Mullvad) extension that would let you browse website in anonymous way. The anonymization was intended 
+to be achieved via Tor, i2p, or mixnet network (probably Nym project). 
+
+I had zero expirience with Go but Claude code 'assured me' it is OK that it handle it, to ask me Go questions in first implementation task to decide libraries - well played Claude, well played... That probably says where the project was aimed since beginning. Ii is in progress over 5 months already and still stuck on Tor branch implementation (that aslo includes the Controlling panel + Browser extension)
+
+### Goal: 
+Create proxy server that would have Controlling/observing panel for anonymizied traffic and let user login into the proxy service that let them browse internet through Tor or Mixnet network, or let the allow to access Onion services or i2p Eepsites via Mullvad browser extension. User should be able to deploy on any vps/computer to have full control over it.
+
+### Tools: 
+- Java 25, Go 1.26, Quarkus, Tor, [i2p, Nym. Docker], 
+- Claude Code (Opus 4.8/5./5.5, Fable 5/5.1, Sonnet 5.5) Opencode(GLM-5.2/5.3/5.3-Flash, Qwen-3.8-max), Codex (Astra 6, Sol 6/6.1, Luna 6), Kimicode (Kimi-K3), NullAway + ErrorProne
+
+### Result
+Complete failure, the worst experience so far. I tried Codex goals, Claude loops, redesigning multiple times based on reports. GLM was terrible here, Qwen was OK-ish on smaller adjustment, all the heavy stuff had to be on Claude or Codex. But at the end even this did not matter. Both are falling into rabbit holes and stuck on local issues that might have bigger global scale cause. Even with iteration on skills and Agents.md file, it was not following very well. Also, this was my experiment with Spec-Kit and so far this worked the worst for me - from design to implementation. I decided to stop this project for now, since I do not see any path how to finish first milestone (5 months feels way to much for this).
