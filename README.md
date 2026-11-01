@@ -93,7 +93,7 @@ They either had many false positive or completly missed HIGH or CRITICAL finding
 
 Overall it creates product that seems working, and is in the test drive. I will report on it more after some time of using it
 
-## [Stargate-v2](https://github.com/zcat-app/stargate-2)
+## [Stargate-v2](https://github.com/zcat-app/stargate-v2)
 Stargate was idea of 3 module project that would create proxy for possible anonymous browsing. The idea was to have configurable proxy that could be used via browser (Firefox/Brave) extension that would let you browse website in anonymous way. The anonymization was intended to be achieved via Tor, i2p, or NYM mixnet network. 
 
 This project was second try after dropping the initial try (see Failures section) with Spec-Kit and mainly driven by Claude. This attempt dropped the idea of common
