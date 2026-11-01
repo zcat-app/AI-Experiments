@@ -93,7 +93,24 @@ They either had many false positive or completly missed HIGH or CRITICAL finding
 
 Overall it creates product that seems working, and is in the test drive. I will report on it more after some time of using it
 
-## [Stargate](https://github.com/zcat-app/stargate)
+## [Stargate-v2](https://github.com/zcat-app/stargate-2)
+Stargate was idea of 3 module project that would create proxy for possible anonymous browsing. The idea was to have configurable proxy that could be used via browser (Firefox/Brave) extension that would let you browse website in anonymous way. The anonymization was intended to be achieved via Tor, i2p, or NYM mixnet network. 
+
+This project was second try after dropping the initial try (see Failures section) with Spec-Kit and mainly driven by Claude. This attempt dropped the idea of common
+patterns of ticket life cycles and started working with **Goals** - loops performed on slices/topics, performed only with Codex, Astra 6, Sol 6.1, Luna 6 and Terra 6.1 
+
+### Goal: 
+Create proxy server that would have controlling/observing panel for anonymizied traffic and let user login into the proxy service that let them browse internet through Tor or Mixnet network, or let the allow to access Onion services or i2p Eepsites via Firefox or Brave browser extension. User should be able to deploy on any vps/computer to have full control over it.
+
+### Tools: 
+- Java 25, Maven, Quarkus, Tor, i2p, Nym, Docker, 
+- Codex (Astra 6, Sol 6.1, Luna 6, Terra 6.1), NullAway + ErrorProne
+
+### Result
+This was totally different story than the initial try with v1 with Spec-Kit. IT might be I did not use the Spec-Kit as it should be, or it was due that process was developed for different model class. It is hard to say, but the common Spec-Driven development used to work quite OK with older models and Zecsite or Infochat projects might be good examples of that. But with newer and stronger models, it become painful and every ticket was failing on need of having of more deferrals. Multiple reworked flow to try to fit to newer models helped only sort term falling into the same trap again. However looping with Goals on smaller slices worked pretty well and it led to getting the project to released shape in matter of days, while the older approach struggled over 5-6 months.
+
+# Failures:
+## [Stargate-v1](https://github.com/zcat-app/stargate)
 Stargate was idea of 3 module project that would create proxy for possible anonymous browsing. The idea was to have configurable proxy that could be used via browser (Mullvad) extension that would let you browse website in anonymous way. The anonymization was intended 
 to be achieved via Tor, i2p, or mixnet network (probably Nym project). 
 
